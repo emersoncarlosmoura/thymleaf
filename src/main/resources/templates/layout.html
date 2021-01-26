@@ -17,18 +17,18 @@
 	<link href="/css/style.css" rel="stylesheet" />
 </head>
 <body>
-	<header th:replace="fragments/footer :: cabecalho">
+	<header th:replace="fragments/header :: cabecalho">
 		<div>header</div>
 	</header>
 	
-	<div>
+	<div class="layout-main">
 		<aside>
-			<nav>
+			<nav th:replace="fragments/sidebar :: nav-sidebar">
 				<span>menu</span>
 			</nav>
 		</aside>
 		
-		<section>
+		<section layout:fragment="corpo">
 			<div>conteudo das páginas</div>
 		</section>
 	</div>
